@@ -1,17 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { Button, Typography, Box, TextField } from '@mui/material';
 import CryptoJS from 'crypto-js';
-import DecryptModal from './DecryptModal';
-
+import { useDropzone } from 'react-dropzone';
 
 function FileUpload() {
-  const [fileContent, setFileContent] = useState('');
   const [encrypted, setEncrypted] = useState('');
 
   const handleEncrypt = (content: string) => {
     const encrypted = CryptoJS.AES.encrypt(content, 'secret key').toString();
     setEncrypted(encrypted);
   };
+
+  const onDrop = useCallback((acceptedFiles) => {
+    const file = acceptedFiles[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const content = e.target?.result;
+      if (content) {
+        handleEncrypt(content.toString());
+      }
+    };
+    reader.readAsDataURL(file);
+  }, []);
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -32,11 +44,20 @@ function FileUpload() {
       <Typography variant="h5" gutterBottom>
         Upload and Encrypt File
       </Typography>
+      <Box {...getRootProps()} sx={{ border: '2px dashed #000', padding: '20px', textAlign: 'center' }}>
+        <input {...getInputProps()} onChange={handleFileChange} />
+        {
+          isDragActive ?
+            <p>Drop the files here ...</p> :
+            <p>Drag 'n' drop some files here, or click to select files</p>
+        }
+      </Box>
       <Button
         variant="contained"
         component="label"
+        sx={{ mt: 2 }}
       >
-        Upload File
+        Select File
         <input
           type="file"
           hidden
@@ -52,6 +73,7 @@ function FileUpload() {
           label="Encrypted Content"
           value={encrypted}
           variant="outlined"
+          sx={{ mt: 2 }}
         />
       )}
     </Box>

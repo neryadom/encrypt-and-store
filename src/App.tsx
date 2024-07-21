@@ -6,7 +6,6 @@ import FileUpload from './FileUpload';
 import DecryptModal from './DecryptModal';
 
 function App() {
-  const [count, setCount] = useState(0);
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleOpenModal = () => setModalOpen(true);
@@ -18,7 +17,9 @@ function App() {
       <Container maxWidth="md">
         <Header />
         <FileUpload />
-        <Button onClick={handleOpenModal} sx={{ mt: 2 }}>Decrypt File</Button>
+        <Button onClick={handleOpenModal} sx={{ mt: 2, bgcolor: 'primary.main', ':hover': { bgcolor: 'primary.dark' }, color: 'white', borderRadius: 2 }}>
+  Decrypt File
+</Button>
         <DecryptModal open={modalOpen} handleClose={handleCloseModal} />
       </Container>
     </>

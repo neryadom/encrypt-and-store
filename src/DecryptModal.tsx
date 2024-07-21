@@ -12,7 +12,7 @@ const style = {
   p: 4,
 };
 
-const DecryptModal = ({ open, handleClose }) => {
+const DecryptModal = ({ open, handleClose }: { open: boolean, handleClose: () => void }) => {
   const [encryptedString, setEncryptedString] = useState('');
   const [decryptionKey, setDecryptionKey] = useState('');
 
