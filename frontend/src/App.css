@@ -1,0 +1,108 @@
+/* App.css */
+
+html,
+body,
+#root, /* Assuming your main React container has an id of 'root' */
+.app { /* Adjust '.app' to match your main container's class or id */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+:root {
+  --primary-color: #1976d2;
+  --hover-color: #1565c0;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --font-family: 'Roboto', sans-serif;
+}
+
+
+.Container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  background-color: var(--background-color);
+}
+
+.Container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 50px;
+  margin: 10px;
+}
+
+.Button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.Button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Responsive Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* app.css */
+.headerBar {
+  background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+}
+
+/* Typography enhancements for a modern look */
+.MuiTypography-root {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 500;
+}
+
+/* Ensuring the icon aligns well with the text */
+.MuiSvgIcon-root {
+  color: #fff;
+  margin-right: 8px;
+  font-size: 1.5rem; /* Adjust icon size as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .MuiTypography-h6 {
+    font-size: 1.25rem; /* Smaller font size on smaller screens */
+  }
+}
+
+/* Typography */
+h1, h2, h3, p {
+  margin: 0 0 20px 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
