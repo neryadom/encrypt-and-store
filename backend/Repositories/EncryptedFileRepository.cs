@@ -15,19 +15,19 @@ namespace backend.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<EncryptedFile>> GetAllFiles()
+        public async Task<IEnumerable<EncryptedFile>> GetFiles()
         {
             return await _context.EncryptedFiles.ToListAsync();
         }
 
-        public async Task<EncryptedFile> GetFileById(int id)
+        public async Task<EncryptedFile> GetFile(int id)
         {
             return await _context.EncryptedFiles.FindAsync(id);
         }
 
         public async Task AddFile(EncryptedFile file)
         {
-            await _context.EncryptedFiles.AddAsync(file);
+            _context.EncryptedFiles.Add(file);
             await _context.SaveChangesAsync();
         }
 

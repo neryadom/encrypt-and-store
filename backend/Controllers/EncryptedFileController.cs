@@ -20,13 +20,13 @@ namespace backend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EncryptedFile>>> GetFiles()
         {
-            return Ok(await _repository.GetAllFiles());
+            return Ok(await _repository.GetFiles());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<EncryptedFile>> GetFile(int id)
         {
-            var file = await _repository.GetFileById(id);
+            var file = await _repository.GetFile(id);
             if (file == null)
             {
                 return NotFound();
@@ -62,3 +62,4 @@ namespace backend.Controllers
         }
     }
 }
+    

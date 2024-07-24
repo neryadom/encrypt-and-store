@@ -10,6 +10,6 @@ namespace backend.Data
         {
         }
 
-        public DbSet<EncryptedFile> EncryptedFiles { get; set; }
+        public DbSet<Models.EncryptedFile> EncryptedFiles { get; set; } = default!;
     }
 }
