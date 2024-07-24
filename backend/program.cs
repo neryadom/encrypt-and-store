@@ -5,11 +5,14 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
-builder.Services.AddDbContext<EncryptedFileContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddScoped<IEncryptedFileRepository, EncryptedFileRepository>();
+builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
+// Configuration is automatically set to read from appsettings.json and environment variables
+var connectionString = builder.Configuration.GetConnectionString("TopSecretDBString");
+// Use the connection string for something, e.g., setting up Entity Framework
+builder.Services.AddDbContext<MyDbContext>(options =>
+    options.UseSqlServer(connectionString));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
