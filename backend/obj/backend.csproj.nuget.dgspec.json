@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\backend\\backend.csproj": {}
+    "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\encrypt-and-store\\backend\\backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\backend\\backend.csproj": {
+    "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\encrypt-and-store\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\backend\\backend.csproj",
+        "projectUniqueName": "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\encrypt-and-store\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\backend\\backend.csproj",
+        "projectPath": "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\encrypt-and-store\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\pourr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\backend\\obj\\",
+        "outputPath": "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\encrypt-and-store\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pourr\\AppData\\Roaming\\NuGet\\NuGet.Config"

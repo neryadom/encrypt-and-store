@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PmxPmEchK0w=",
+  "dgSpecHash": "r/pJxI2JTao=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\backend\\backend.csproj",
+  "projectFilePath": "C:\\Users\\pourr\\Desktop\\nzmsa\\hehe\\encrypt-and-store\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pourr\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\pourr\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
